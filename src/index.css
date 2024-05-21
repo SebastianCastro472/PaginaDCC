@@ -1,0 +1,556 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+:root {
+  --color1: #0D8C08;
+  --color2: #f20707;
+  --color3: #97d695;
+  --color4: #F2F2F2;
+  --color5: #0D0D0D;
+  --color6: linear-gradient(180deg, var(--color4),var(--color1));
+  --color7: linear-gradient(10deg, var(--color1), var(--color4));
+}
+
+.Pagina{
+  margin: 0;
+  padding: 0; 
+  background: var(--color6);
+}
+
+/*-----------------------HEADER---------------------------------------------------------*/
+
+.Header{
+  box-sizing: border-box;
+  background: var(--color7);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
+  text-align: left; 
+  
+}
+
+
+/*-----------------------LOGO---------*/
+.logoyredes{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border: 5px solid rgb(0, 45, 11);
+ 
+}
+
+.Logo{
+  display:inline-block;  
+}
+
+.LogoDolores{
+  width: 15%;
+  height: auto;
+  margin-left:36.2% ;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+/*Logo para movil*/
+@media (max-width: 600px) {
+  .LogoDolores{
+    width: 30%;
+    height: auto;
+    margin-left: 20%;
+  }
+
+}
+
+/*-----------------------REDES---------*/
+.Redes{
+  width: 25%;
+  height: 5%;
+  display:inline-block;
+  text-align: left; 
+  padding: 1%;
+  max-width: max-content;
+}
+
+.LogoRedes{
+  width: 30%;
+  height: auto;
+  margin-left: 10%;
+}
+
+.LogoRedes:hover{
+  transform: scale(1.2);
+  background: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*Redes para movil*/
+@media (max-width: 600px) {
+  .Redes{
+    width: 220%;
+    height: auto;
+    margin-left: 2%;
+  }
+  .LogoRedes{
+    width: 40%;
+    height: auto;
+    
+  }
+}
+
+/*-----------------------MENU---------*/
+.Menu {
+  width: 100%;
+  height: auto;
+background: rgb(0, 45, 11);
+  overflow-x: auto;
+  
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+nav > ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  
+}
+
+nav ul li {
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0.8%;
+  
+}
+
+nav > ul > li > a {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 80%;
+  transition: all 300ms ease;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+  
+}
+
+nav > ul > li > a:hover {
+  background: var(--color1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+}
+
+/*Menu para movil*/
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: row; 
+    justify-content: flex-start; 
+    padding: 0 10px; 
+  }
+
+  nav ul li {
+    padding: 10px; 
+  }
+
+  .Menu {
+    overflow-x: auto; 
+    white-space: nowrap; 
+  }
+}
+
+/*-----------------------MAIN---------------------------------------------------------*/
+
+.Cuerpo{
+  border: 2px solid black;
+}
+
+/*-----------------------SLIDES---------------------------------------------------------*/
+.container {
+  width: 100%;
+  height: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+
+.heading {
+  padding: 1rem 0;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.swiper_container {
+  height: 50%; 
+  position: relative;
+  
+}
+.slide1{
+  width: 60%;
+  height: 45%;
+  position: relative;
+  
+}
+.slide1:hover{
+  transform: scale(1.2);
+}
+.slide1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+  z-index: 1; /* Asegura que el degradado se coloque sobre la imagen */
+  border-radius: 2rem;
+}
+.slider_img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; /* Asegura que la imagen esté detrás del degradado */
+  border-radius: 2rem;
+  
+}
+.slider_img:hover{
+  transform: scale(1.2);
+}
+
+.slide-content {
+  position: absolute;
+  top: 60%;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.slide-content h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+}
+.slide-content p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100%;
+}
+
+
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controler .slider-arrow::after {
+  content: '';
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+@media (max-width: 600px) {
+  .container{
+    width:100% ;
+    height: auto;
+  }
+ .slide1{
+  width: 80%;
+ }
+
+}
+/*-----------------------TEAMSLIDES---------------------------------------------------------*/
+.Teamcontainer {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.Teamswiper_container {
+  height: 50%; 
+  position: relative;
+  border: 2px solid black;
+}
+.slide2{
+  width: auto;
+  height: 45%;
+  position: relative;
+}
+.slide2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5));
+  z-index: 1; /* Asegura que el degradado se coloque sobre la imagen */
+  border-radius: 2rem;
+}
+.teamSlider_img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; /* Asegura que la imagen esté detrás del degradado */
+  border-radius: 2rem;
+  margin-left: 2px;
+}
+.Teamslide-content {
+  position: absolute;
+  top: 60%;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.Teamslide-content h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+}
+.Teamslide-content p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100%;
+}
+
+.Teamswiper-slide-shadow-left,
+.Teamswiper-slide-shadow-right {
+  display: none;
+}
+
+.Teamslider-controler {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Teamslider-controler .slider-arrow::after {
+  content: '';
+}
+
+.Teamswiper-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+}
+
+.Teamswiper-pagination .Teamswiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/*-----------------------FOOTER---------------------------------------------------------*/
+
+.LogoDolores-footer{
+  width: 10%;
+  height: auto;
+}
+.sponsors{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.LogoSponsors{
+  width: 9%;
+  height: auto;
+  margin: 1.5%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+.LogoSponsors:hover{
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+.sponsors1{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.LogoSponsors1{
+  width: 12%;
+  height: auto;
+  margin: 1.5%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+.container-footer {
+  
+  color: var(--color4);
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+.LogoSponsors1:hover{
+  transform: scale(1.2);
+}
+/*-----------------------PRODUCTOS---------------------------------------------------------*/
+.productos{
+  width: 80%;
+  border: 2px solid black;
+  display: flex;
+  background-color: var(--color1);
+  margin-top: 5%;
+  margin-bottom: 10%;
+  border-style: solid;
+  border-radius: 0 20% 10% 0;
+
+}
+.producto{
+  display: inline-block;
+  border: 2px solid black;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.producto p{
+  color: var(--color4);
+}
+.producto:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/*-----------------------Equipo---------------------------------------------------------*/
+.Team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Team_imagenes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  justify-items: center;
+  margin-bottom: 20%;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+  
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.Team_titulo{
+  margin:5%;
+}
+/*-----------------------Perfil---------------------------------------------------------*/
+.Perfil {
+  display: flex;
+  gap: 0%; 
+  margin-top: 5%;
+  
+}
+
+.Perfil_foto_redes, .Perfil_info {
+  flex: 1; 
+  border: 2px solid black;
+}
+
+.Perfil_foto_redes {
+  display: flex;
+  flex-direction: column; 
+}
+
+.Perfil_foto {
+  width: 65%;
+  margin-left: 27%; 
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.perfil-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.LogoSponsors1 {
+  width: 32px; /* Ajusta el tamaño según sea necesario */
+  height: 32px;
+  margin-right: 8px; /* Espacio entre los logos de redes sociales */
+}
+
+.Perfil_redes {
+  display: flex;
+  justify-content: center; 
+  margin-top:1% ;
+  margin-bottom:3% ;
+  margin-left:20% ;
+}
+
+.Perfil_info {
+  align-items: left;
+}
+.Perfil_info h1 {
+  margin-left: 4%;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+
+.info-item h2, .info-item h3 {
+  margin: 0;
+  text-align: center;
+  margin-left: 2%;
+}
