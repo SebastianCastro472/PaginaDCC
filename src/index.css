@@ -46,6 +46,7 @@
 
 .Logo{
   display:inline-block;  
+  align-items: center;
 }
 
 .LogoDolores{
@@ -84,8 +85,7 @@
 
 .LogoRedes:hover{
   transform: scale(1.2);
-  background: transparent;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  
 }
 
 /*Redes para movil*/
@@ -181,7 +181,7 @@ nav > ul > li > a:hover {
 /*-----------------------MAIN---------------------------------------------------------*/
 
 .Cuerpo{
-  border: 2px solid black;
+  
 }
 
 /*-----------------------SLIDES---------------------------------------------------------*/
@@ -384,6 +384,12 @@ nav > ul > li > a:hover {
   width: 10%;
   height: auto;
 }
+.Logo_footer{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 2%
+}
 .sponsors{
   box-sizing: border-box;
   margin: 0;
@@ -492,19 +498,39 @@ nav > ul > li > a:hover {
 /*-----------------------Perfil---------------------------------------------------------*/
 .Perfil {
   display: flex;
-  gap: 0%; 
-  margin-top: 5%;
+  border: 2px solid black;
+  background-image: url('./imagenes/Foto2.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   
+}
+.Perfil_content{
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  border: 2px solid black;
+}
+.name-and-flag {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.nationality-image {
+  width: 4%; 
+  height: auto; 
 }
 
 .Perfil_foto_redes, .Perfil_info {
   flex: 1; 
-  border: 2px solid black;
+  
 }
 
 .Perfil_foto_redes {
   display: flex;
   flex-direction: column; 
+  border: 2px solid black;
 }
 
 .Perfil_foto {
@@ -519,22 +545,22 @@ nav > ul > li > a:hover {
   display: block;
 }
 
-.LogoSponsors1 {
-  width: 32px; /* Ajusta el tamaño según sea necesario */
-  height: 32px;
-  margin-right: 8px; /* Espacio entre los logos de redes sociales */
+.Perfil_redes_foto {
+  width: 8%;
+  margin:1%;
+ 
 }
 
 .Perfil_redes {
   display: flex;
   justify-content: center; 
-  margin-top:1% ;
-  margin-bottom:3% ;
-  margin-left:20% ;
+  
+  margin-top:25%;
 }
 
 .Perfil_info {
   align-items: left;
+  border: 2px solid black;
 }
 .Perfil_info h1 {
   margin-left: 4%;
@@ -543,7 +569,6 @@ nav > ul > li > a:hover {
 .info-item {
   display: flex;
   align-items: center;
-  
   margin-left: 2%;
   margin-top: 2%;
   margin-right: 2%;
@@ -553,4 +578,104 @@ nav > ul > li > a:hover {
   margin: 0;
   text-align: center;
   margin-left: 2%;
+}
+/*----------------------------staff------------------------------------------*/
+.Team_imagenes_staff {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  justify-items: center;
+  margin-bottom: 20%;
+}
+.Team_staff{
+  border: 2px solid black;
+  text-align: center;
+  width: 80%;
+  
+}
+.staff-image{
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  
+}
+.staff_redes{
+  
+}
+.Team_staff:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.Perfil_redes_foto:hover{
+  transform: scale(1.2);
+}
+
+/*----------------------------Sponsors------------------------------------------*/
+.Sponsors-main{
+  
+  display: grid;
+  justify-items: left;
+  align-items: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.Sponsors-Principales {
+  display: grid;
+  width: 65%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  justify-items: center;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  
+}
+.Sponsors-imagenes{
+  background-color: #cfffd2;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.Sponsors-imagenes:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.Sponsors-imagenes img{
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+.Sponsors-Secundarios {
+  display: grid;
+  width: 65%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  justify-items: center;
+  margin-bottom: 20%;
+  margin-top: 5%;
+}
+.Sponsors-imagenes1{
+  background-color: #cfffd2;
+  width: 220px;
+  height: 220px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.Sponsors-imagenes1:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.Sponsors-imagenes1 img{
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+  
+  
 }

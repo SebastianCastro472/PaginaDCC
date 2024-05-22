@@ -24,7 +24,7 @@ import Logo from '../Imagenes/dolores.png';
 export const Footer = () => {
     return ( 
         <footer className='Footer'>
-        <div className='Logo'>
+        <div className='Logo_footer'>
           <img className='LogoDolores-footer' src={Logo} alt="imagen" />
         </div>   
         <div className='sponsors1'>
