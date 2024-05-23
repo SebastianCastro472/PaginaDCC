@@ -2,11 +2,11 @@ import React from 'react';
 import Instagram from '../Imagenes/instagram.png';
 import Facebook from '../Imagenes/facebook.png';
 import Logo from '../Imagenes/dolores.png';
+import  Principal  from './Paginas/Principal';
 
-export const Header = () => {
+export const Header = ({ setCurrentPage }) => {
     return (
-        <header className='Header'>   
-          
+        <header className='Header'>    
           <div className='logoyredes'>
             <div className='Redes'>
               <a href="https://www.instagram.com/dolorescyclesclub/" target="_blank" rel="noopener noreferrer">
@@ -17,18 +17,18 @@ export const Header = () => {
               </a>
             </div>
             <div className='Logo'>
-              <img className='LogoDolores' src={Logo} alt="imagen" />
+              <img className='LogoDolores' src={Logo} alt="imagen" onClick={() => setCurrentPage('Principal')} />
             </div>
           </div>
         <div className='Menu'>
             <nav>
-                <ul>
-                <li><a href="#" >HAZTE SOCIO</a></li>
-                <li><a href="#">EQUIPO</a></li>
-                <li><a href="#">TEMPORADA 2023-2024</a></li>
-                <li><a href="#">COMISION</a></li>
-                <li><a href="#">SPONSORS</a></li>
-                <li><a href="#">SOBRE NOSOTROS</a></li>
+            <ul>
+                    <li><a href="#" onClick={() => setCurrentPage('HazteSocio')}>HAZTE SOCIO</a></li>
+                    <li><a href="#" onClick={() => setCurrentPage('Equipo')}>EQUIPO</a></li>
+                    <li><a href="#" onClick={() => setCurrentPage('Carreras')}>CARRERAS</a></li>
+                    <li><a href="#" onClick={() => setCurrentPage('Comision')}>COMISION</a></li>
+                    <li><a href="#" onClick={() => setCurrentPage('Sponsors')}>SPONSORS</a></li>
+                    <li><a href="#" onClick={() => setCurrentPage('SobreNosotros')}>SOBRE NOSOTROS</a></li>
                 </ul>
             </nav>
         </div>
