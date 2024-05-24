@@ -7,7 +7,7 @@
   --color1: #0D8C08;
   --color2: #f20707;
   --color3: #97d695;
-  --color4: #F2F2F2;
+  --color4: #f0f0f0;
   --color5: #0D0D0D;
   --color6: linear-gradient(180deg, var(--color4),var(--color1));
   --color7: linear-gradient(10deg, var(--color1), var(--color4));
@@ -22,65 +22,59 @@
 /*-----------------------HEADER---------------------------------------------------------*/
 
 .Header{
-  box-sizing: border-box;
-  background: var(--color7);
+  background: var(--color4);
   margin: 0;
   padding: 0;
   width: 100%;
-  height: auto;
+  height: 150px;
   max-width: 100%;
-  display: inline-block;
-  text-align: left; 
-  
+  display: flex;
+  align-items: left;
+  align-content: left;
+  border-bottom: 2px solid var(--color1);
+  border: 2px solid black;
 }
 
 
 /*-----------------------LOGO---------*/
-.logoyredes{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  border: 5px solid rgb(0, 45, 11);
- 
-}
-
 .Logo{
-  display:inline-block;  
-  align-items: center;
+  display: inline-block;
+  justify-content: flex-start;
 }
 
 .LogoDolores{
-  width: 15%;
+  width: 150px;
   height: auto;
-  margin-left:36.2% ;
-  margin-top: 3%;
-  margin-bottom: 1%;
+  margin-left: 50px;
+  margin-top: 20px;
+  
 }
 
 /*Logo para movil*/
-@media (max-width: 600px) {
-  .LogoDolores{
-    width: 30%;
-    height: auto;
-    margin-left: 20%;
-  }
 
+/*------------------menuyredes-------------------*/
+.MenuYRedes{
+  
+  width: 100%;
 }
+.Menuu {
+  display: none; 
+ }
+ .Menu2{
+  display: none;
+ }
 
 /*-----------------------REDES---------*/
 .Redes{
-  width: 25%;
-  height: 5%;
-  display:inline-block;
-  text-align: left; 
-  padding: 1%;
-  max-width: max-content;
+  width: auto;
+  margin-left: 35px;
 }
 
 .LogoRedes{
-  width: 30%;
+  width: 30px;
   height: auto;
-  margin-left: 10%;
+  margin-top: 8px;
+  margin-left: 6px;
 }
 
 .LogoRedes:hover{
@@ -88,50 +82,21 @@
   
 }
 
-/*Redes para movil*/
-@media (max-width: 600px) {
-  .Redes{
-    width: 220%;
-    height: auto;
-    margin-left: 2%;
-  }
-  .LogoRedes{
-    width: 40%;
-    height: auto;
-    
-  }
-}
 
 /*-----------------------MENU---------*/
 .Menu {
   width: 100%;
-  height: auto;
-background: rgb(0, 45, 11);
-  overflow-x: auto;
-  
+  height: 50%;
+  position: relative;
+}
+ ul {
+  width: 90%; 
+  position: absolute; 
+  bottom: 0;
+  margin-left: 10px;
 }
 
-nav {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-nav > ul {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
-  
-}
-
-nav ul li {
+ ul li {
   height: auto;
   display: inline-flex;
   justify-content: center;
@@ -139,43 +104,85 @@ nav ul li {
   
 }
 
-nav > ul > li > a {
-  height: auto;
-  display: flex;
-  align-items: center;
-  padding: 10px;
+ul > li > a {
+  margin-left: 20px;
+  padding: 4px;
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 15px;
   transition: all 300ms ease;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  border-left: 2px solid rgb(255, 255, 255);
-  border-right: 2px solid rgb(255, 255, 255);
-  
+  color: rgb(139, 139, 139); 
 }
-
-nav > ul > li > a:hover {
-  background: var(--color1);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+/* Estilos para la barra */
+ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: var(--color1);
+  transition: width 0.5s ease;
+  transform-origin: center;
+}
+ul li a:hover::after {
+  width: 100%;  
+}
+ul li a:hover { 
   transform: scale(1.2);
+  color: rgb(0, 0, 0); 
 }
 
-/*Menu para movil*/
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: row; 
-    justify-content: flex-start; 
-    padding: 0 10px; 
+/*----------MovilHeader------------------------------------*/
+@media (max-width: 768px) {
+  .Header{
+    height: 100px;
+  }
+  
+   .MenuYRedes{
+   }
+   /*-----------Logo------*/
+
+   .Logo{
+    width: 300px;
+  }
+  
+  .LogoDolores{
+    width: 100px;
+    margin-left: 103px;
+  }
+  /*-----------------------REDES---------*/
+  .Redes{
+  width: 80px;
+  margin-left: 65px;
+  margin-top: 30px;
+    }
+
+  .LogoRedes{
+  
   }
 
-  nav ul li {
-    padding: 10px; 
+  .LogoRedes:hover{
+ 
   }
 
+  /*-----------Menu---------------------*/
   .Menu {
-    overflow-x: auto; 
-    white-space: nowrap; 
-  }
+    display: none; 
+   }
+   .Menu2{
+    
+   }
+   .Menuu{
+    display: block; 
+    width: 50px;
+   }
+   .Menuu img{
+    width: 25px;
+    margin: 5px;
+    margin-top: 45px;
+    margin-left: 10px;
+ }
+
+
 }
 
 /*-----------------------MAIN---------------------------------------------------------*/
