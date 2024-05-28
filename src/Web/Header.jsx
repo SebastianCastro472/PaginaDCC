@@ -1,40 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Instagram from '../Imagenes/instagram.png';
 import Facebook from '../Imagenes/facebook.png';
 import Logo from '../Imagenes/dolores.png';
 import  Principal  from './Paginas/Principal';
 import Menu from '../Imagenes/menu.png';
 
-document.addEventListener('DOMContentLoaded', function() {
-  const imagenMenu = document.getElementById('imagenMenu');
-  const menu = document.querySelector('.Menu2');
 
-  imagenMenu.addEventListener('click', function() {
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  });
-});
+const Header = ({ setCurrentPage }) => {
+  const [isActive, setIsActive] = useState(false);
 
-export const Header = ({ setCurrentPage }) => {
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+
     return (
       <header className='Header'>
         <div className='Menuu'>
-          <img src={Menu} alt="" className='imagenMenu' />
+          <button id="menuButton" className={isActive ? 'active' : ''} onClick={handleClick}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
         </div>
         <div className='Logo'>
           <img className='LogoDolores' src={Logo} alt="imagen" onClick={() => setCurrentPage('Principal')} />
         </div>
         <div className='MenuYRedes'>
-          <div className='Menu'>  
-              <ul>
-                <li><a href="#" onClick={() => setCurrentPage('HazteSocio')}>HAZTE SOCIO</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('Equipo')}>EQUIPO</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('Carreras')}>CARRERAS</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('Comision')}>COMISION</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('Sponsors')}>SPONSORS</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('SobreNosotros')}>SOBRE NOSOTROS</a></li>
-              </ul> 
-          </div>
-          <div className='Menu2'>  
+          <div className={`Menu ${isActive ? 'active' : ''}`} id="menu">
               <ul>
                 <li><a href="#" onClick={() => setCurrentPage('HazteSocio')}>HAZTE SOCIO</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('Equipo')}>EQUIPO</a></li>
@@ -54,7 +46,7 @@ export const Header = ({ setCurrentPage }) => {
           </div>
         </div>
       </header>  
-    )
+    );
     
-}
+};
 export default Header;

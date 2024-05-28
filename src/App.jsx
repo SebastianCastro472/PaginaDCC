@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'
 import  {Main}  from './Web/Main';
-import { Header } from './Web/Header';
+import  Header  from './Web/Header';
 import { Footer } from './Web/Footer';
 
 function App() {

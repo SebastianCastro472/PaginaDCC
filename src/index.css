@@ -10,19 +10,19 @@
   --color4: #f0f0f0;
   --color5: #0D0D0D;
   --color6: linear-gradient(180deg, var(--color4),var(--color1));
-  --color7: linear-gradient(10deg, var(--color1), var(--color4));
+  --color7: linear-gradient(180deg, var(--color5), var(--color3));
 }
 
 .Pagina{
   margin: 0;
   padding: 0; 
-  background: var(--color6);
+  background:var(--color7);
 }
 
 /*-----------------------HEADER---------------------------------------------------------*/
 
 .Header{
-  background: var(--color4);
+  background: #ffffff;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -31,8 +31,8 @@
   display: flex;
   align-items: left;
   align-content: left;
-  border-bottom: 2px solid var(--color1);
-  border: 2px solid black;
+  border-bottom: 2px solid black;
+  
 }
 
 
@@ -134,55 +134,127 @@ ul li a:hover {
 /*----------MovilHeader------------------------------------*/
 @media (max-width: 768px) {
   .Header{
-    height: 100px;
+    position:unset;
+    height: 20%;
   }
   
-   .MenuYRedes{
-   }
+   
    /*-----------Logo------*/
 
    .Logo{
-    width: 300px;
+    width: 100%;
   }
   
   .LogoDolores{
-    width: 100px;
-    margin-left: 103px;
+    width: 60%;
+    margin-left: 50%;
   }
   /*-----------------------REDES---------*/
   .Redes{
-  width: 80px;
-  margin-left: 65px;
-  margin-top: 30px;
+  width: 460%;
+  margin-top: 30%;
+  margin-left: 45%;
     }
 
   .LogoRedes{
-  
+    width: 35px;
   }
 
   .LogoRedes:hover{
- 
+    transform: scale(1.2);
+    color: rgb(0, 0, 0); 
   }
 
   /*-----------Menu---------------------*/
-  .Menu {
-    display: none; 
-   }
-   .Menu2{
+  .Menuu {
+    display: block;/* Contenedor del botón con posición relativa */
     
-   }
-   .Menuu{
-    display: block; 
-    width: 50px;
-   }
-   .Menuu img{
-    width: 25px;
-    margin: 5px;
-    margin-top: 45px;
+  }
+  
+  .Menuu button {
+    position: relative; /* Asegura que el botón esté en el flujo del documento */
+    z-index: 3; /* Coloca el botón por encima del menú */
+    margin-top: 110%;
     margin-left: 10px;
- }
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+  }
+  
+  .Menuu button > div {
+    background: black;
+    height: 2px;
+    width: 80%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+  }
+  
+  .Menuu button.active div:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .Menuu button.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .Menuu button.active div:last-child {
+    transform: rotate(-45deg);
+  }
+  
+  .Menu {
+    position: absolute;
+    margin-top: 10%;
+    left: -250px; /* Ocultar fuera de la vista */
+    width: 250px;
+    height: 75%; 
+    background: #fff; 
+    transition: left 0.5s;
+    display: flex;
+    flex-direction: column; /* Para que los elementos se dispongan en columna */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    justify-content: flex-start; /* Asegurar que los elementos estén en la parte superior */
+    z-index: 1; /* Coloca el menú por debajo del botón */
+    
+  }
+  
+  .Menu.active {
+    left: 0; /* Mover dentro de la vista */
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column; /* Para que los elementos se dispongan en columna */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    justify-content: flex-start; /* Asegurar que los elementos estén en la parte superior */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .Menu ul {
+    padding: 0;
+    
+    width: 100%;
+    text-align: center; 
+    display: flex;
+    flex-direction: column; /* Para que los elementos se dispongan en columna */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    justify-content: flex-start; /* Asegurar que los elementos estén en la parte superior */
+    
+  }
+  
+  .Menu ul li {
+    margin: 15px 0;
+  }
+  
+  .Menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+  }
 
-
+  
 }
 
 /*-----------------------MAIN---------------------------------------------------------*/
@@ -191,14 +263,15 @@ ul li a:hover {
   
 }
 
+
 /*-----------------------SLIDES---------------------------------------------------------*/
 .container {
   width: 100%;
   height: auto;
   padding-top: 3%;
   padding-bottom: 3%;
-  margin: 0 auto;
-  border: 2px solid black;
+  margin-top: 3%;
+  
 }
 
 
@@ -217,10 +290,12 @@ ul li a:hover {
   width: 60%;
   height: 45%;
   position: relative;
+  overflow: hidden; 
   
 }
 .slide1:hover{
   transform: scale(1.2);
+  border-radius: 2rem;
 }
 .slide1::before {
   content: '';
@@ -233,6 +308,10 @@ ul li a:hover {
   z-index: 1; /* Asegura que el degradado se coloque sobre la imagen */
   border-radius: 2rem;
 }
+.slide1:hover .slider_img {
+  transform: scale(1.1); /* Aplica el efecto de zoom */
+  border-radius: 2rem;
+}
 .slider_img{
   width: 100%;
   height: 80%;
@@ -241,7 +320,7 @@ ul li a:hover {
   position: relative;
   z-index: 0; /* Asegura que la imagen esté detrás del degradado */
   border-radius: 2rem;
-  
+  transition: transform 0.5s ease-in-out ;
 }
 .slider_img:hover{
   transform: scale(1.2);
@@ -252,20 +331,66 @@ ul li a:hover {
   top: 60%;
   z-index: 2;
   color: white;
-  text-align: center;
+  text-align: left;
+  margin-left: 5%;
   padding: 1rem;
-  border-radius: 1rem;
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
+ 
+}
+.slide-content button {
+  width: 40%;
+  
 }
 .slide-content h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 200%;
+  
 }
 .slide-content p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 100%;
 }
+/*-------------------------------------Boton------------*/
 
+.slide-content button{
+  background:var(--color1);
+  color:#fff;
+  margin: 5%;
+  width: 50%;
+  border:none;
+  position:relative;
+  font-size:1.1em;
+  padding: 1%;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.slide-content button:hover{
+  background:#fff;
+  color:var(--color1);
+}
+.slide-content button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: var(--color1);
+  transition:400ms ease all;
+}
+.slide-content button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.slide-content button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
 
+/*------------------------------------------------------*/
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -303,17 +428,30 @@ ul li a:hover {
 
 }
 /*-----------------------TEAMSLIDES---------------------------------------------------------*/
+.sldEquipo{
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
+  background: #ffe8e880;
+  margin-top: 5%;
+}
+.sldEquipo h1{
+  color: #fff;
+  margin : 1%;
+  padding-top: 2%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  text-decoration: underline rgb(1, 209, 36);
+}
 .Teamcontainer {
   padding-top: 3%;
   padding-bottom: 3%;
   margin: 0 auto;
-  border: 2px solid black;
+  
 }
 
 .Teamswiper_container {
   height: 50%; 
   position: relative;
-  border: 2px solid black;
+  
 }
 .slide2{
   width: auto;
@@ -352,7 +490,11 @@ ul li a:hover {
 }
 .Teamslide-content h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 200%;
+  font-size: 20px;
+  padding-top: 20%;
+}
+.Teamslide-content img {
+  width: 15%;
 }
 .Teamslide-content p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -386,7 +528,9 @@ ul li a:hover {
 }
 
 /*-----------------------FOOTER---------------------------------------------------------*/
-
+.Footer{
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
+}
 .LogoDolores-footer{
   width: 10%;
   height: auto;

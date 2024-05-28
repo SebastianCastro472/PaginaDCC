@@ -4,16 +4,20 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+const Uruguay = new URL('../../imagenes/uruguay.png', import.meta.url).href;
+const Argentina = new URL('../../imagenes/argentina.png', import.meta.url).href;
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-const slide_image_1 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_2 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_3 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_4 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_5 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_6 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const slide_image_7 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
+const Ale = new URL('../../imagenes/Ciclistas/ale.jpg', import.meta.url).href;
+const Calvo = new URL('../../imagenes/Ciclistas/Calvo.jpg', import.meta.url).href;
+const Coro = new URL('../../imagenes/Ciclistas/Coro.jpg', import.meta.url).href;
+const Martin = new URL('../../imagenes/Ciclistas/Martin.jpg', import.meta.url).href;
+const Lucas = new URL('../../imagenes/Ciclistas/Perfil.jpg', import.meta.url).href;
+const Seba = new URL('../../imagenes/Ciclistas/Seba.jpg', import.meta.url).href;
+const Tato = new URL('../../imagenes/Ciclistas/Tato.jpg', import.meta.url).href;
+const Toto = new URL('../../imagenes/Ciclistas/Toto.jpg', import.meta.url).href;
+
 
 const TeamSlides = () => {
     return (
@@ -41,29 +45,60 @@ const TeamSlides = () => {
                 className="Teamswiper_container"
             >
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_1} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Seba} alt="Teamslide_image" />
                     <div className="Teamslide-content">
-                        <h2>Slide 1 Title</h2>
-                        <p>This is some description for slide 1.</p>
+                        <h2>SEBASTIAN CASTRO</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_2} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Martin} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>MARTIN CASTRO</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_3} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Tato} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>STEFANO URAN</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_4} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Calvo} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>MARTIN CALVO</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_5} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Coro} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>DIEGO PEREYRA</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_6} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Lucas} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>LUCAS GADAY</h2>
+                        <img src={Argentina} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className='slide2'>
-                    <img className='teamSlider_img' src={slide_image_7} alt="Teamslide_image" />
+                    <img className='teamSlider_img' src={Ale} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>ALEXANDER GUISOLI</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='slide2'>
+                    <img className='teamSlider_img' src={Toto} alt="Teamslide_image" />
+                    <div className="Teamslide-content">
+                        <h2>RODRIGO MARR</h2>
+                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
+                    </div>
                 </SwiperSlide>
 
                 <div className="Teamslider-controler">

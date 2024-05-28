@@ -4,18 +4,20 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import Sitios from '../Components/Sitios';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+const Ruta = new URL('../../imagenes/Carreras/Ruta.jpg', import.meta.url).href;
+const Nacionales = new URL('../../imagenes/Carreras/Nacionales.jpg', import.meta.url).href;
+const Vuelta = new URL('../../imagenes/Carreras/Vuelta.jpg', import.meta.url).href;
+const Chana = new URL('../../imagenes/Carreras/Chana.jpg', import.meta.url).href;
 
-const slide_image_1 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_2 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_3 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_4 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_5 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_6 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const slide_image_7 = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
 
 const Slides = () => {
+
+    const handleSlideClick = (url) => {
+        window.open(url, '_blank');
+    };
+
     return (
         <div className="container">
             <Swiper
@@ -39,30 +41,33 @@ const Slides = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_container"
             >
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_1} alt="slide_image" />
+                <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
+                    <img className='slider_img' src={Ruta} alt="slide_image" />
                     <div className="slide-content">
-                        <h2>Slide 1 Title</h2>
-                        <p>This is some description for slide 1.</p>
+                        <h2>RUTAS DE AMERICA</h2>
+                        <button>Leer Mas</button>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_2} alt="slide_image" />
+                <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
+                    <img className='slider_img' src={Vuelta}  alt="slide_image" />
+                    <div className="slide-content">
+                        <h2>VUELTA CICLISTA DEL URUGUAY 2024</h2>
+                        <button>Leer mas</button>
+                    </div>
                 </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_3} alt="slide_image" />
+                <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
+                    <img className='slider_img' src={Chana}  alt="slide_image" />
+                    <div className="slide-content">
+                        <h2>VUELTA CICLISTA CHANA  2024</h2>
+                        <button>Leer mas</button>
+                    </div>
                 </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_4} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_5} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_6} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide className='slide1'>
-                    <img className='slider_img' src={slide_image_7} alt="slide_image" />
+                <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
+                    <img className='slider_img' src={Nacionales}  alt="slide_image" />
+                    <div className="slide-content">
+                        <h2>NACIONALES DE RUTA</h2>
+                        <button>Leer mas</button>
+                    </div>
                 </SwiperSlide>
 
                 <div className="slider-controler">
