@@ -23,34 +23,15 @@ import Logo from '../Imagenes/dolores.png';
 
 export const Footer = () => {
     return ( 
-        <footer className='Footer'>
-        <div className='Logo_footer'>
-          <img className='LogoDolores-footer' src={Logo} alt="imagen" />
-        </div>   
-        <div className='sponsors1'>
-          <img className='LogoSponsors1' src={Logo15} alt="Logo" />
-          <img className='LogoSponsors1' src={Logo10} alt="Logo" />
-        </div>
-        <div className='sponsors'>
-          <img className='LogoSponsors' src={Logo1} alt="Logo" />
-          <img className='LogoSponsors' src={Logo2} alt="Logo" />
-          <img className='LogoSponsors' src={Logo3} alt="Logo" />
-          <img className='LogoSponsors' src={Logo4} alt="Logo" />
-          <img className='LogoSponsors' src={Logo6} alt="Logo" />
-          <img className='LogoSponsors' src={Logo7} alt="Logo" />
-          <img className='LogoSponsors' src={Logo8} alt="Logo" />
-          <img className='LogoSponsors' src={Logo9} alt="Logo" />     
-          <img className='LogoSponsors' src={Logo11} alt="Logo" />
-          <img className='LogoSponsors' src={Logo12} alt="Logo" />
-          <img className='LogoSponsors' src={Logo13} alt="Logo" />
-          <img className='LogoSponsors' src={Logo14} alt="Logo" />        
-          <img className='LogoSponsors' src={Logo16} alt="Logo" />
-          <img className='LogoSponsors' src={Logo17} alt="Logo" />
-          <img className='LogoSponsors' src={Logo18} alt="Logo" />
-          <img className='LogoSponsors' src={Logo19} alt="Logo" />
-          <img className='LogoSponsors' src={Logo20} alt="Logo" />
-          <img className='LogoSponsors' src={Logo21} alt="Logo" />
-          <img className='LogoSponsors' src={Logo22} alt="Logo" />
+      <footer className='Footer'>
+        <div className='Footer-Logo'>
+          <div className='Logo_footer'>
+            <img className='LogoDolores-footer' src={Logo} alt="imagen" />
+          </div>   
+          <div className='sponsors1'>
+            <img className='LogoSponsors1' src={Logo15} alt="Logo" />
+            <img className='LogoSponsors1' src={Logo10} alt="Logo" />
+          </div>
         </div>
         <div className='container-footer'>
             <p>&copy; 2024 Dolores Cycles Club. Todos los derechos reservados.</p>

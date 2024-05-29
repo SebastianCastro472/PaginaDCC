@@ -44,7 +44,7 @@ const Slides = () => {
                 <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
                     <img className='slider_img' src={Ruta} alt="slide_image" />
                     <div className="slide-content">
-                        <h2>RUTAS DE AMERICA</h2>
+                        <h2>RUTAS DE AMERICA 2024</h2>
                         <button>Leer Mas</button>
                     </div>
                 </SwiperSlide>
@@ -65,7 +65,7 @@ const Slides = () => {
                 <SwiperSlide className='slide1' onClick={() => handleSlideClick({Sitios})}>
                     <img className='slider_img' src={Nacionales}  alt="slide_image" />
                     <div className="slide-content">
-                        <h2>NACIONALES DE RUTA</h2>
+                        <h2>NACIONALES DE RUTA 2024</h2>
                         <button>Leer mas</button>
                     </div>
                 </SwiperSlide>

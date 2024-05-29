@@ -1,6 +1,7 @@
 import  Productos  from '../Components/Productos';
 import  Slides  from '../Components/ImageSlider';
 import TeamSlides from '../Components/TeamSlider';
+import Sponsor_principal from '../Components/Sponsors_principal';
 
 export const Principal = () => {
     return ( 
@@ -9,8 +10,11 @@ export const Principal = () => {
             <Slides/>{ }
             </div>         
             <div className='sldEquipo'>
-            <h1>EQUIPO</h1>
+            <h1>CONOCE NUESTRO EQUIPO</h1>
             <TeamSlides/>{}
+            </div>
+            <div>
+            <Sponsor_principal/>{}
             </div>
             
         </div>
