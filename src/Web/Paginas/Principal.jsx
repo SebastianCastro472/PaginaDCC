@@ -13,7 +13,7 @@ export const Principal = () => {
             <h1>CONOCE NUESTRO EQUIPO</h1>
             <TeamSlides/>{}
             </div>
-            <div>
+            <div className='sldSpon'>
             <Sponsor_principal/>{}
             </div>
             

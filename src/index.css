@@ -7,16 +7,19 @@
   --color1: #0D8C08;
   --color2: #f20707;
   --color3: #97d695;
-  --color4: #f0f0f0;
+  --color4: #d9d9d9;
   --color5: #0D0D0D;
   --color6: linear-gradient(180deg, var(--color4),var(--color1));
+  --color8: linear-gradient(180deg, var(--color1),var(--color4));
   --color7: linear-gradient(180deg, var(--color2), var(--color1));
 }
 
 .Pagina{
   margin: 0;
   padding: 0; 
-  background:var(--color2);
+  background:var(--color4);
+  max-width: 100%;
+  
 }
 
 /*-----------------------HEADER---------------------------------------------------------*/
@@ -435,7 +438,7 @@ ul li a:hover {
 /*-----------------------TEAMSLIDES---------------------------------------------------------*/
 .sldEquipo{
   box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
-  background: #00000080;
+  background: var(--color6);
   margin-top: 5%;
 }
 .sldEquipo h1{
@@ -547,71 +550,77 @@ ul li a:hover {
     margin-top: 20px;
   }
 }
-
+.sldSpon{
+margin-top: 10%;
+}
 /*-----------------------FOOTER---------------------------------------------------------*/
 .Footer{
   box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
 }
+.Footer-Logos{
+  display: flex;
+  background: #f0f0f0;
+}
 .LogoDolores-footer{
-  width: 10%;
-  height: auto;
+  width: 50%;
+  margin: 15%;
+  margin-left: 40%;
 }
 .Logo_footer{
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  margin: 2%
-}
-.sponsors{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: inline-block;
-  text-align: center;
-}
-.LogoSponsors{
-  width: 9%;
-  height: auto;
-  margin: 1.5%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
-}
-.LogoSponsors:hover{
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
+  width: 20%;
 }
 .sponsors1{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+  width: 20%;
+  height: 20%;
   display: flex;
-  justify-content: center;
-  align-items: center; 
+  margin-top: 2%;
+  margin-right: 2%;
 }
 .LogoSponsors1{
-  width: 12%;
+  width: 50%;
   height: auto;
-  margin: 1.5%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
 }
 .container-footer {
-  
-  color: var(--color4);
-  text-align: center;
-  padding: 10px 0;
-  bottom: 0;
+  background: #f0f0f0;
   width: 100%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
-.LogoSponsors1:hover{
-  transform: scale(1.2);
+.container-footer p {
+  font-size: 1.5cap;
+  color: var(--color2);
 }
+.Redes-Footer{
+  width: 50%;
+  margin: 3%;
+  margin-top: 5%;
+  margin-left: 29%;
+}
+.LogoRedes-Footer{
+  width: 6%;
+  margin: 1%;
+}
+
+@media (max-width: 768px) {
+  .container-footer p {
+    font-size: 1cap;
+    color: var(--color2);
+  }
+  .LogoDolores-footer{
+    width: 100%;
+  }
+  .LogoRedes-Footer{
+    width: 15%;
+  }
+  .LogoSponsors1{
+    width: 100%;
+  }
+  .sponsors1{
+    margin-right: 13%;
+  }
+}
+
 /*-----------------------PRODUCTOS---------------------------------------------------------*/
 .productos{
   width: 80%;
@@ -646,11 +655,12 @@ ul li a:hover {
 }
 
 .Team_imagenes {
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  gap: 1%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 .team-image {
@@ -659,13 +669,43 @@ ul li a:hover {
   transition: transform 0.3s ease-in-out;
 }
 
-.team-image:hover {
-  
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
-}
 .Team_titulo{
   margin:5%;
+}
+.Team_titulo h1{
+  font-size: 4cap;
+  color: #ffffff;
+  text-shadow: 3px 3px 4px var(--color1); 
+}
+.Team_perfil{
+  width: 60%;
+  transition: 600ms;
+  display: block;
+}
+.Team_perfil:hover{
+  width: 60%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.01);
+  
+}
+.Team_perfil_nomb_nac{
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}
+.Team_perfil_nomb_nac img{
+  width: 12%;
+  margin-left: 4%;
+  
+}
+.Team_perfil_nomb_nac h2{
+  color: #ffffff;
+  font-size: 2cap;
+  text-shadow: 3px 3px 3px var(--color1); 
 }
 /*-----------------------Perfil---------------------------------------------------------*/
 .Perfil {
@@ -852,13 +892,13 @@ ul li a:hover {
 /*---------------------------------SPONSORS PRINCIPAL----------------------*/
 .Sponsors_principal-main{
   box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
-  background: #ffe8e880;
+  background: var(--color6);
   margin-top: 5%;
   height: 1000px;
 }
 .Sponsors_principal-main h1{
     color: white;
-    padding-top: 2%;
+    padding-top: 5%;
     padding-left: 2%;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);  
 }
@@ -941,7 +981,7 @@ ul li a:hover {
 .Sponsors_principal-Secundarios {
   display: grid;
   width: 90%;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
   margin-top: 5%;

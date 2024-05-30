@@ -20,18 +20,30 @@ import Logo20 from '../Imagenes/sponsors/20.png';
 import Logo21 from '../Imagenes/sponsors/21.png';
 import Logo22 from '../Imagenes/sponsors/22.png';
 import Logo from '../Imagenes/dolores.png';
+import Instagram from '../Imagenes/instagram.png';
+import Facebook from '../Imagenes/facebook.png';
 
 export const Footer = () => {
     return ( 
       <footer className='Footer'>
-        <div className='Footer-Logo'>
-          <div className='Logo_footer'>
-            <img className='LogoDolores-footer' src={Logo} alt="imagen" />
-          </div>   
-          <div className='sponsors1'>
-            <img className='LogoSponsors1' src={Logo15} alt="Logo" />
-            <img className='LogoSponsors1' src={Logo10} alt="Logo" />
-          </div>
+        <div className='Footer-Logos'>
+          
+            <div className='Logo_footer'>
+              <img className='LogoDolores-footer' src={Logo} alt="imagen" />
+            </div>   
+            <div className='Redes-Footer'>
+              <a href="https://www.instagram.com/dolorescyclesclub/" target="_blank" rel="noopener noreferrer">
+                <img className='LogoRedes-Footer' src={Instagram} alt="Instagram" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61556320772475" target="_blank" rel="noopener noreferrer">
+                <img className='LogoRedes-Footer' src={Facebook} alt="Facebook" />
+              </a>
+            </div>
+            <div className='sponsors1'>
+              <img className='LogoSponsors1' src={Logo15} alt="Logo" />
+              <img className='LogoSponsors1' src={Logo10} alt="Logo" />
+            </div>
+          
         </div>
         <div className='container-footer'>
             <p>&copy; 2024 Dolores Cycles Club. Todos los derechos reservados.</p>

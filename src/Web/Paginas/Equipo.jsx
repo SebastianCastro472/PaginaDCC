@@ -7,9 +7,6 @@ export const Equipo = () => {
             <div>
             <Team/>{ }
             </div>
-            <div>
-            <Productos/>{ }
-            </div>
         </div>
     )
 }
