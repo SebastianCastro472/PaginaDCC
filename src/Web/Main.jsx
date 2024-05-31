@@ -12,7 +12,7 @@ export const Main = ({ currentPage }) => {
 
     switch(currentPage) {
         case 'HazteSocio':
-            PageComponent = <Socio />;
+            PageComponent = <Perfil />;
             break;
         case 'Equipo':
             PageComponent = <Equipo />;
