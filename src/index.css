@@ -742,20 +742,18 @@ margin-top: 10%;
 /*-----------------------Perfil---------------------------------------------------------*/
 
 .Perfil{
-  border: 2px solid black;
+  
   width: 100%;
   height: auto;
   
 }
 .Perfil-SolidoFoto{
-  border: 2px solid black;
   display: flex;
   align-items: center;
   z-index: 0;
   position: relative;
 }
 .Perfil-Foto{
-  border: 2px solid black;
   position: relative;
   width: 70%;
   height: 700px;
@@ -767,6 +765,11 @@ margin-top: 10%;
   height: 100%; 
   max-width: 100%; 
   object-fit: cover; 
+  z-index: 1;
+}
+.Perfil-Foto h1 {
+  font-size: 3cap;
+  z-index: 7;
 }
 .Perfil-Foto::before {
   content: '';
@@ -779,18 +782,36 @@ margin-top: 10%;
   z-index: 1; /* Asegura que el degradado se coloque sobre la imagen */
 }
 .Perfil-Solido{
-  border: 2px solid black;
   padding-left: 10px;
-  background: var(--color1);
+  background: #006c09;
+  height: 700px;
+  width: 40%;
 }
 .Perfil-InfoEspacio{
   border: 2px solid black;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  position: relative;
 }
 .Perfil-Info{
   border: 2px solid black;
+  width: 80%;
+  height: 100%; 
+  max-width: 100%;
 }
 .Perfil-Espacio{
   border: 2px solid black;
+  width: 100%;
+  position: relative;
+}
+.Perfil-Espacio img {
+  width: 76%;
+  position: absolute; /* Permite mover la imagen */
+  top: -650px; /* Ajusta el valor según sea necesario para mover la imagen hacia arriba */
+  left: 0%; /* Centra la imagen horizontalmente */
+  /*transform: translateX(-50%);  Ajuste adicional para centrar */
+  m
 }
 
 
