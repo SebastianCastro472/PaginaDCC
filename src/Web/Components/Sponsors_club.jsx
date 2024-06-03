@@ -10,7 +10,7 @@ const Sponsors_club = () => {
     return (
     <div className="Sponsors">
         <div className="Sponsors-main">
-            <h1>Sponsors principales</h1>
+            <h1>SPONSORS PRINCIPALES</h1>
             <div className="Sponsors-Principales">
                 <div className="Sponsors-imagenes">
                     <img src={Sp1} alt="" />
@@ -34,7 +34,7 @@ const Sponsors_club = () => {
                     <img src={Sp7} alt="" />
                 </div>
             </div>
-            <h1>Sponsors secundarios</h1>
+            <h1>SPONSORS SECUNDARIOS</h1>
             <div className="Sponsors-Secundarios">
                 
                 <div className="Sponsors-imagenes1">
