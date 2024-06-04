@@ -718,6 +718,34 @@ margin-top: 10%;
   justify-content: center;
   
 }
+.Team_perfil_nomb_nac1{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.Team_perfil_nomb_nac1 h2{
+  font-size: 2cap;
+  color: #ffffff;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  3px  3px 3px black;
+}
+
+.Team_perfil_nomb_nac1 h3{
+  font-size: 1.5cap;
+  color: #00ff00;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  1px  1px 1px black;
+}
+
 .Team_perfil_nomb_nac img{
   width: 12%;
   margin-left: 4%;
@@ -743,6 +771,12 @@ margin-top: 10%;
   .Team_perfil{
     width: 80%;
   
+  }
+  .Team_perfil_nomb_nac1 h2{
+    font-size: 1cap;
+  }
+  .Team_perfil_nomb_nac1 h3{
+    font-size: 0.5cap;
   }
 
 
@@ -998,8 +1032,8 @@ margin-top: 10%;
   display: grid;
   justify-items: center;
   align-items: center;
-  
   margin-top: 5%;
+
 }
 .Sponsors-main h1{
   font-size: 4cap;
@@ -1012,13 +1046,12 @@ margin-top: 10%;
 }
 .Sponsors-Principales {
   display: grid;
-  width: 65%;
+  width: 90%;
   grid-template-columns: repeat(3, 1fr);
   gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
   margin-bottom: 20%;
   margin-top: 5%;
-  
 }
 .Sponsors-imagenes{
   background-color: #cfffd2;
@@ -1041,7 +1074,7 @@ margin-top: 10%;
 }
 .Sponsors-Secundarios {
   display: grid;
-  width: 65%;
+  width: 90%;
   grid-template-columns: repeat(4, 1fr);
   gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
@@ -1165,9 +1198,16 @@ margin-top: 10%;
   margin-top: 5%;
   margin-left: 5%;
 }
+.Sponsors-main{
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-top: 5%;
+}
 
 .Sponsors-main h1{
-  font-size: 2.5cap;
+  font-size: 2cap;
   color: #ffffff;
   text-shadow:  
   -1px -1px 0 #000,  
@@ -1177,13 +1217,13 @@ margin-top: 10%;
 }
 .Sponsors-Principales {
   display: grid;
-  width: 65%;
+  width: 70%;
+
   grid-template-columns: repeat(2, 1fr);
-  gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
   margin-top: 5%;
-  
+  max-width: 100%;
 }
 .Sponsors-imagenes{
   background-color: #cfffd2;
@@ -1194,46 +1234,107 @@ margin-top: 10%;
   align-items: center;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-
-
+.Sponsors-Secundarios {
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  justify-items: center;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  left:0%;
+  max-width: 100%;
+}
+.Sponsors-imagenes1{
+  background-color: #cfffd2;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
 
 
 }
 
 /*----------------------------SobreNosotros------------------------------------------*/
 .Sobre-Nosotros{
-  border: 2px solid black;
   display: grid;
   justify-items: center;
   align-items: center;
 }
 .Sobre-Nosotros1{
-  background-color: var(--color4);
+  background-color: white;
   margin-top:5% ;
-  border: 2px solid black;
+  margin-bottom:5% ;
   display: grid;
   justify-items: center;
   align-items: center;
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.Sobre-Nosotros-Titulo{
-  border: 2px solid black;
-  width: 80%;
+.Sobre-Nosotros1 p{
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 1cap;
+  color: #2b2b2b;
+  margin-bottom: 1%;
+}
+.Sobre-Nosotros1 h1{
+  margin-top: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 3cap;
+  color: var(--color1);
+  
+}
+.Sobre-Nosotros1 h2{
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 3%;
+  font-size: 2.5cap;
+  color: var(--color2);
+  
+}
+.Sobre-Nosotros1 h3{
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 2cap;
+  color: var(--color2);
+  
+}
+.Sobre-Nosotros1 img{
+  margin-top: 5%;
   margin:2% ;
-}
-.Sobre-Nosotros-img {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-.Sobre-Nosotros-img img{
-  margin:2% ;
   width: 80%;
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .Sobre-Nosotros-Parrafo{
   border: 2px solid black;
   margin:2% ;
 }
+@media (max-width: 768px) {
 
+  .Sobre-Nosotros1{
+    width: 90%;
+  }
+  .Sobre-Nosotros1 h1{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 2cap;
+    text-shadow: none;
+  }
+  .Sobre-Nosotros1 h2{
+    font-size: 1.5cap;
+  }
+  .Sobre-Nosotros1 h3{
+    font-size: 1.5cap;
+  }
+
+}
 /*--------------------------Carreras----------------------------*/
 
 .Carreras {
@@ -1244,17 +1345,44 @@ margin-top: 10%;
 
 .Carreras_imagenes {
   display: grid;
+  width: 70%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+  gap: 2%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
   margin-bottom: 20%;
 }
 .Carreras_staff{
-  border: 2px solid black;
+  background: var(--color6);
   text-align: center;
-  width: 80%;
-  
+  width: 100%;
+  margin-bottom: 10%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
+.Carreras_staff:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.01);
+}
+
+.Carreras_staff h1{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 2cap;
+    color: white;
+}
+.Carreras_staff p{
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  font-size: 1cap;
+  color: var(--color5);
+}
+.Carreras_staff img{
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+ 
+}
+
 .Carreras-image {
   width: 100%;
   height: auto;
@@ -1262,10 +1390,78 @@ margin-top: 10%;
 }
 
 .Carreras-image:hover {
-  
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
 .Carreras_titulo{
   margin:5%;
+}
+.Carreras_titulo h1{
+  font-size: 4cap;
+  color: #ffffff;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  3px  3px 3px black;
+}
+@media (max-width: 768px) {
+
+  .Carreras_titulo h1{
+    
+  }
+  .Carreras_staff h1{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 0.5cap;
+    color: white;
+}
+.Carreras_staff p{
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  font-size: 0.3cap;
+  color: var(--color5);
+}
+.Carreras_imagenes {
+  width: 90%;
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+/*--------------------------socio-----------------------------------*/
+
+.Socios{
+  position: relative;
+}
+.Arriba{
+width: 100%;
+z-index: 0;
+}
+.Arriba::before {
+  content: '';
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to bottom,  rgba(253, 253, 253, 0),rgb(0, 0, 0));
+   /* Asegura que el degradado se coloque sobre la imagen */
+  
+}
+.Arriba img{
+  width: 100%;
+  height: auto;
+  
+}
+.Membresia{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #00ff00;
+  z-index: 1;
+}
+.Abajo{
+content: "";
+background: var(--color4);
+height: 250px;
 }

@@ -30,7 +30,7 @@ const Header = ({ setCurrentPage }) => {
               <ul>
                 <li><a href="#" onClick={() => setCurrentPage('HazteSocio')}>HAZTE SOCIO</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('Equipo')}>EQUIPO</a></li>
-                <li><a href="#" onClick={() => setCurrentPage('Carreras')}>CARRERAS</a></li>
+                <li><a href="#" onClick={() => setCurrentPage('Carreras')}>POSTS</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('Comision')}>COMISION</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('Sponsors')}>SPONSORS</a></li>
                 <li><a href="#" onClick={() => setCurrentPage('SobreNosotros')}>SOBRE NOSOTROS</a></li>
