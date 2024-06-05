@@ -297,11 +297,11 @@ ul li a:hover {
   height: 45%;
   position: relative;
   overflow: hidden; 
-  
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
 }
 .slide1:hover{
   transform: scale(1.2);
-  border-radius: 2rem;
+  
 }
 .slide1::before {
   content: '';
@@ -312,11 +312,11 @@ ul li a:hover {
   height: 100%;
   background: linear-gradient(to bottom,  rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
   z-index: 1; /* Asegura que el degradado se coloque sobre la imagen */
-  border-radius: 2rem;
+  
 }
 .slide1:hover .slider_img {
   transform: scale(1.1); /* Aplica el efecto de zoom */
-  border-radius: 2rem;
+  
 }
 .slider_img{
   width: 100%;
@@ -325,7 +325,6 @@ ul li a:hover {
   object-fit: cover;
   position: relative;
   z-index: 0; /* Asegura que la imagen esté detrás del degradado */
-  border-radius: 2rem;
   transition: transform 0.5s ease-in-out ;
 }
 .slider_img:hover{
@@ -441,15 +440,20 @@ ul li a:hover {
 }
 /*-----------------------TEAMSLIDES---------------------------------------------------------*/
 .sldEquipo{
-  box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
-  background: var(--color6);
+  
+  background: var(--color4);
   margin-top: 5%;
 }
 .sldEquipo h1{
-  color: #fff;
-  padding-top: 2%;
-  padding-left: 2%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+  color: var(--color1);
+  font-size:3cap;
+  margin-top: 2%; 
+  margin-left: 2%;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  1px  1px 1px black; 
 }
 .Teamcontainer {
   padding-top: 1%;
@@ -569,7 +573,11 @@ ul li a:hover {
   
 }
 .sldSpon{
-margin-top: 10%;
+  margin-top: 10%;
+}
+.LineaRoja{
+  height: 3px;
+  background: var(--color2);
 }
 /*-----------------------FOOTER---------------------------------------------------------*/
 .Footer{
@@ -1102,16 +1110,20 @@ margin-top: 10%;
 }
 /*---------------------------------SPONSORS PRINCIPAL----------------------*/
 .Sponsors_principal-main{
-  box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
-  background: var(--color6);
+  background: var(--color4);
   margin-top: 5%;
   height: 1000px;
 }
 .Sponsors_principal-main h1{
-    color: white;
-    padding-top: 5%;
-    padding-left: 2%;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);  
+  color: var(--color1);
+  font-size:3cap;
+  margin-top: 2%; 
+  margin-left: 2%;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  1px  1px 1px black;  
 }
 .Sponsors_principal-Principales {
   display: grid;
@@ -1434,19 +1446,18 @@ margin-top: 10%;
   position: relative;
 }
 .Arriba{
-width: 100%;
-z-index: 0;
+  position: relative; 
+  z-index: 0; 
+  background-color: lightgreen; 
 }
 .Arriba::before {
   content: '';
   position: absolute;
-  top: 130px;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 100%;
   background: linear-gradient(to bottom,  rgba(253, 253, 253, 0),rgb(0, 0, 0));
-   /* Asegura que el degradado se coloque sobre la imagen */
-  
 }
 .Arriba img{
   width: 100%;
@@ -1454,14 +1465,88 @@ z-index: 0;
   
 }
 .Membresia{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: #00ff00;
-  z-index: 1;
+  width: 300px;
+  height: 380px;
+  left: 39%;
+  bottom: 200px;
+  position: relative; 
+  z-index: 10; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 4%;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .Abajo{
-content: "";
-background: var(--color4);
-height: 250px;
+  position: relative; 
+  z-index: 5; 
+  background-color: var(--color4); 
+  height: 200px;
 }
+.LineaRoja{
+  background: var(--color2);
+  height: 3px;
+  width: 100%;
+  margin-top: 1%;
+}
+.Membresia img{
+  width: 45%;
+  margin-top: 5%; 
+}
+.Membresia h1{
+  color: var(--color1);
+  font-size:3cap;
+  margin-top: 1%; 
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  1px  1px 3px black;
+}
+.Membresia h2{
+  margin-top: 18%;
+  margin-bottom: 18%;
+  color: var(--color5);
+  font-size:2cap;
+}
+.Membresia button{
+  width: 50%;
+  height: 10%;
+  margin-top: 5%;
+  color: var(--color1);
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.Membresia button:hover{
+transform: scale(1.1);
+}
+.Precio{
+display: flex;
+}
+.Precio h3{
+  margin-top: 22%;
+  margin-bottom: 7%;
+  color: #3f3f3f;
+  font-size:1.5cap;
+  }
+
+  @media (max-width: 768px) {
+
+    .Membresia{
+      width: 300px;
+      height: 380px;
+      left: 11%;
+      bottom: 45px;
+      position: relative; 
+      z-index: 10; 
+      background-color: rgb(255, 255, 255); 
+      border-radius: 4%;
+      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+
+  }

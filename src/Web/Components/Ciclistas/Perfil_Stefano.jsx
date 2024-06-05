@@ -1,13 +1,11 @@
-const Perfil1 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
-const Redes1 = new URL('../../imagenes/instagram.png', import.meta.url).href;
-const Redes2 = new URL('../../imagenes/facebook.png', import.meta.url).href;
-const NACIONALIDAD = new URL('../../imagenes/uruguay.png', import.meta.url).href;
-const Foto = new URL('../../imagenes/Foto2.jpg', import.meta.url).href;
-const insta = new URL('../../imagenes/instagram1.png', import.meta.url).href;
-const face = new URL('../../imagenes/facebook1.png', import.meta.url).href;
-const tato = new URL('../../imagenes/Ciclistas/SinFondo/Tato-sf.png', import.meta.url).href;
 
-const Team = () => {
+const Foto = new URL('../../../imagenes/Foto2.jpg', import.meta.url).href;
+const insta = new URL('../../../imagenes/instagram1.png', import.meta.url).href;
+const face = new URL('../../../imagenes/facebook1.png', import.meta.url).href;
+const tato = new URL('../../../imagenes/Ciclistas/SinFondo/Tato-sf.png', import.meta.url).href;
+import React from 'react';
+
+const Perfil_Stefano = () => {
     return (
     <div className="Perfil">
         <div className="Perfil-SolidoFoto">
@@ -56,4 +54,4 @@ const Team = () => {
     </div>
     )
 }
-export default Team;
+export default Perfil_Stefano;

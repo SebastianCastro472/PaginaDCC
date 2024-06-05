@@ -1,6 +1,6 @@
 import Team from '../Components/Team';
 import Productos from '../Components/Productos';
-import Perfil_ciclista from '../Components/Perfil_ciclista';
+import Perfil_ciclista from '../Components/Ciclistas/Perfil_Stefano';
 
 export const Perfil = () => {
     return ( 

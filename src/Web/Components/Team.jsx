@@ -1,4 +1,5 @@
 const Perfil1 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
+import { Link } from 'react-router-dom';
 const Ale = new URL('../../imagenes/Ciclistas/ale.jpg', import.meta.url).href;
 const Calvo = new URL('../../imagenes/Ciclistas/Calvo.jpg', import.meta.url).href;
 const Coro = new URL('../../imagenes/Ciclistas/Coro.jpg', import.meta.url).href;
@@ -11,71 +12,35 @@ const Uruguay = new URL('../../imagenes/uruguay.png', import.meta.url).href;
 const Argentina = new URL('../../imagenes/argentina.png', import.meta.url).href;
 
 
-const Team = () => {
+const Team = ({ setSelectedProfile }) => {
+    const profiles = [
+        { name: 'Stefano', image: Tato, nationality: Uruguay, fullname: 'STEFANO URAN' },
+        { name: 'Lucas', image: Lucas, nationality: Argentina, fullname: 'LUCAS GADAY' },
+        { name: 'Martin', image: Martin, nationality: Uruguay, fullname: 'MARTIN CASTRO' },
+        { name: 'Calvo', image: Calvo, nationality: Uruguay, fullname: 'MARTIN CALVO' },
+        { name: 'Seba', image: Seba, nationality: Uruguay, fullname: 'SEBASTIAN CASTRO' },
+        { name: 'Coro', image: Coro, nationality: Uruguay, fullname: 'LDIEGO PEREYRA' },
+        { name: 'Ale', image: Ale, nationality: Uruguay, fullname: 'ALEXANDER GUISOLI' },
+        { name: 'Toto', image: Toto, nationality: Uruguay, fullname: 'RODRIGO MARR' },
+    ];
     return (
-     <div className="Team">
-        <div className="Team_titulo">
-            <h1>NUESTRO EQUIPO</h1>
-        </div>
-        <div className="Team_imagenes"> 
-            <div className="Team_perfil">
-                <img src={Lucas} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>LUCAS GADAY </h2>
-                        <img src={Argentina} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
+        <div className="Team">
+            <div className="Team_titulo">
+                <h1>NUESTRO EQUIPO</h1>
             </div>
-            <div className="Team_perfil">
-                <img src={Martin} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>MARTIN CASTRO </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Coro} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>DIEGO PEREYRA </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Calvo} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>MARTIN CALVO </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Seba} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>SEBASTIAN CASTRO </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Tato} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>STEFANO URAN </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Ale} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>ALEXANDER GUISOLI </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
-            </div>
-            <div className="Team_perfil">
-                <img src={Toto} alt="" className="team-image" />
-                    <div className="Team_perfil_nomb_nac">
-                        <h2>RODRIGO MARR </h2>
-                        <img src={Uruguay} alt="Nacionalidad" className="nationality-image" />
-                    </div>      
+            <div className="Team_imagenes">
+                {profiles.map((profile) => (
+                    <div key={profile.name} className="Team_perfil" onClick={() => setSelectedProfile(profile.name)}>
+                        <img src={profile.image} alt={profile.name} className="team-image" />
+                        <div className="Team_perfil_nomb_nac">
+                            <h2>{profile.fullname}</h2>
+                            <img src={profile.nationality} alt="Nacionalidad" className="nationality-image" />
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-     </div>
-    )
-}
+    );
+};
+
 export default Team;

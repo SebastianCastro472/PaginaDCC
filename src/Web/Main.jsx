@@ -6,8 +6,12 @@ import  Sponsors  from './Paginas/Sponsors';
 import  SobreNosotros  from './Paginas/SobreNosotros';
 import  Carreras  from './Paginas/Carreras';
 import  Socio  from './Paginas/Socio';
+import Perfil_Stefano from './Components/Ciclistas/Perfil_Stefano';
+import React, { useState } from 'react';
 
 export const Main = ({ currentPage }) => {
+   
+    const [selectedProfile, setSelectedProfile] = useState(null);
     let PageComponent;
 
     switch(currentPage) {
@@ -15,7 +19,7 @@ export const Main = ({ currentPage }) => {
             PageComponent = <Socio />;
             break;
         case 'Equipo':
-            PageComponent = <Equipo />;
+            PageComponent = <Equipo setSelectedProfile={setSelectedProfile} />;
             break;
         case 'Carreras':
             PageComponent = <Carreras />;
@@ -32,7 +36,16 @@ export const Main = ({ currentPage }) => {
         default:
             PageComponent = <Principal />;
     }
-
+    if (selectedProfile) {
+        switch (selectedProfile) {
+            case 'Stefano':
+                PageComponent = <Perfil_Stefano />;
+                break;
+            
+            default:
+                PageComponent = <Principal />;
+        }
+    }
     return ( 
         <div>
             {PageComponent}
