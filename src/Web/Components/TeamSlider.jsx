@@ -9,15 +9,14 @@ const Argentina = new URL('../../imagenes/argentina.png', import.meta.url).href;
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-const Ale = new URL('../../imagenes/Ciclistas/ale.jpg', import.meta.url).href;
-const Calvo = new URL('../../imagenes/Ciclistas/Calvo.jpg', import.meta.url).href;
-const Coro = new URL('../../imagenes/Ciclistas/Coro.jpg', import.meta.url).href;
-const Martin = new URL('../../imagenes/Ciclistas/Martin.jpg', import.meta.url).href;
-const Lucas = new URL('../../imagenes/Ciclistas/Perfil.jpg', import.meta.url).href;
-const Seba = new URL('../../imagenes/Ciclistas/Seba.jpg', import.meta.url).href;
-const Tato = new URL('../../imagenes/Ciclistas/Tato.jpg', import.meta.url).href;
-const Toto = new URL('../../imagenes/Ciclistas/Toto.jpg', import.meta.url).href;
-
+const Ale = new URL('../../imagenes/Ciclistas/Ale/ale.jpg', import.meta.url).href;
+const Calvo = new URL('../../imagenes/Ciclistas/Calvo/Calvo.jpg', import.meta.url).href;
+const Coro = new URL('../../imagenes/Ciclistas/Coro/Coro.jpg', import.meta.url).href;
+const Martin = new URL('../../imagenes/Ciclistas/Martin/Martin.jpg', import.meta.url).href;
+const Lucas = new URL('../../imagenes/Ciclistas/Lucas/Lucas.jpg', import.meta.url).href;
+const Seba = new URL('../../imagenes/Ciclistas/Seba/Seba.jpg', import.meta.url).href;
+const Tato = new URL('../../imagenes/Ciclistas/Tato/Tato.jpg', import.meta.url).href;
+const Toto = new URL('../../imagenes/Ciclistas/Toto/Toto.jpg', import.meta.url).href;
 
 const TeamSlides = () => {
     return (

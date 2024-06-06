@@ -5,17 +5,27 @@ import  Header  from './Web/Header';
 import { Footer } from './Web/Footer';
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('Principal');
+  const [currentPage, setCurrentPage] = useState('Principal');
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  const handlePageChange = (page) => {
+      setSelectedProfile(null); // Deseleccionar perfil al cambiar de página
+      setCurrentPage(page);
+  };
 
   return (
-    <>
-    <body className='Pagina'> 
-      <Header setCurrentPage={setCurrentPage} /> {/* Usar el componente Header importado */}
-      <Main currentPage={currentPage} />{/* Usar el componente Main importado */}   
-      <Footer />{/* Usar el componente Footer importado */}
-      </body>
-    </>
-  )
+      <>
+      <div className='Pagina'> 
+          <Header setCurrentPage={handlePageChange} /> {/* Usar el componente Header importado */}
+          <Main 
+              currentPage={currentPage} 
+              selectedProfile={selectedProfile} 
+              setSelectedProfile={setSelectedProfile} 
+          /> {/* Usar el componente Main importado */}   
+          <Footer />{/* Usar el componente Footer importado */}
+      </div>
+      </>
+  );
 }
 
-export default App
+export default App;

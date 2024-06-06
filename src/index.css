@@ -679,6 +679,31 @@ ul li a:hover {
   flex-direction: column;
   align-items: center;
 }
+.Team_categoria{
+width: 100%;
+display: flex;
+align-items: center;
+margin-bottom: 3%;
+
+}
+.Team_categoria h3{
+  font-size: 3.5cap;
+  white-space: nowrap;
+  color: #ffffff;
+  padding-right: 1%;
+  padding-left: 1%;
+  text-shadow:  
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px  1px 0 #000,
+  3px  3px 3px black;
+  }
+.LineaC{
+  width: 100%;
+  height: 10px;
+  background: #000;
+  margin-top:2% ;
+}
 
 .Team_imagenes {
   width: 90%;
@@ -771,7 +796,7 @@ ul li a:hover {
 
 @media (max-width: 768px) {
   .Team_titulo h1{
-    font-size: 2cap;  
+    font-size: 3cap;  
   }
   .Team_perfil_nomb_nac h2{
     font-size: 1cap; 
@@ -786,7 +811,18 @@ ul li a:hover {
   .Team_perfil_nomb_nac1 h3{
     font-size: 0.5cap;
   }
-
+  .Team_categoria h3{
+    font-size: 1.5cap;
+    white-space: nowrap;
+    color: #ffffff;
+    padding-right: 1%;
+    padding-left: 1%;
+    text-shadow:  
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    3px  3px 3px black;
+    }
 
 }
 

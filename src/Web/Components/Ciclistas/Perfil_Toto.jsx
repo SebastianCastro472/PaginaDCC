@@ -1,18 +1,17 @@
-
-const Foto = new URL('../../../imagenes/Ciclistas/Tato/Tato-Fondo.jpg', import.meta.url).href;
+const Foto = new URL('../../../imagenes/Ciclistas/Toto/Toto-Fondo.jpg', import.meta.url).href;
 const insta = new URL('../../../imagenes/instagram1.png', import.meta.url).href;
 const face = new URL('../../../imagenes/facebook1.png', import.meta.url).href;
-const tato = new URL('../../../imagenes/Ciclistas/Tato/Tato-sf.png', import.meta.url).href;
+const tato = new URL('../../../imagenes/Ciclistas/Toto/Toto-sf.png', import.meta.url).href;
 import React from 'react';
 
-const Perfil_Stefano = () => {
+const Perfil_Toto = () => {
     return (
     <div className="Perfil">
         <div className="Perfil-SolidoFoto">
             <div className="Perfil-Foto">
                 <img src={Foto} alt="" />
-                <h2>Stefano</h2>
-                <h1>Uran</h1>
+                <h2>Rodrigo</h2>
+                <h1>Marr</h1>
                 <p>fsefwef</p>
             </div>
             <div className="Perfil-Solido" >
@@ -30,11 +29,11 @@ const Perfil_Stefano = () => {
                         <h2>PESO</h2>
                     </div>
                     <div className="item2">
-                        <h3>Stefano</h3>
-                        <h3>Uran Ibañez</h3>
+                        <h3>Rodrigo</h3>
+                        <h3>Marr</h3>
                         <h3>Uruguayo</h3>
-                        <h3>1.76m</h3>
-                        <h3>90Kg</h3>
+                        <h3>1.74m</h3>
+                        <h3>64Kg</h3>
                     </div>
                 </div>
             </div>
@@ -54,4 +53,4 @@ const Perfil_Stefano = () => {
     </div>
     )
 }
-export default Perfil_Stefano;
+export default Perfil_Toto;
