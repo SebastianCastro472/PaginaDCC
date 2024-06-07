@@ -1,4 +1,5 @@
-const Perfil1 = new URL('../../imagenes/Perfil.png', import.meta.url).href;
+// Equipo.jsx
+import React from 'react';
 import { Link } from 'react-router-dom';
 const Ale = new URL('../../imagenes/Ciclistas/Ale/ale.jpg', import.meta.url).href;
 const Calvo = new URL('../../imagenes/Ciclistas/Calvo/Calvo.jpg', import.meta.url).href;
@@ -11,8 +12,7 @@ const Toto = new URL('../../imagenes/Ciclistas/Toto/Toto.jpg', import.meta.url).
 const Uruguay = new URL('../../imagenes/uruguay.png', import.meta.url).href;
 const Argentina = new URL('../../imagenes/argentina.png', import.meta.url).href;
 
-
-const Team = ({ setSelectedProfile }) => {
+const Team = () => {
     const profilesElite = [
         { name: 'Lucas', image: Lucas, nationality: Argentina, fullname: 'LUCAS GADAY' },
         { name: 'Martin', image: Martin, nationality: Uruguay, fullname: 'MARTIN CASTRO' },
@@ -24,41 +24,45 @@ const Team = ({ setSelectedProfile }) => {
         { name: 'Stefano', image: Tato, nationality: Uruguay, fullname: 'STEFANO URAN' },
         { name: 'Seba', image: Seba, nationality: Uruguay, fullname: 'SEBASTIAN CASTRO' },
         { name: 'Ale', image: Ale, nationality: Uruguay, fullname: 'ALEXANDER GUISOLI' },
-        ];
+    ];
     return (
         <div className="Team">
             <div className="Team_titulo">
                 <h1>NUESTRO EQUIPO</h1>
             </div>
             <div className='Team_categoria'>
-            <div className='LineaC'><nav></nav></div>
+                <div className='LineaC'><nav></nav></div>
                 <h3>ELITE</h3>
                 <div className='LineaC'><nav></nav></div>
             </div>
             <div className="Team_imagenes">
                 {profilesElite.map((profile) => (
-                    <div key={profile.name} className="Team_perfil" onClick={() => setSelectedProfile(profile.name)}>
-                        <img src={profile.image} alt={profile.name} className="team-image" />
-                        <div className="Team_perfil_nomb_nac">
-                            <h2>{profile.fullname}</h2>
-                            <img src={profile.nationality} alt="Nacionalidad" className="nationality-image" />
-                        </div>
+                    <div key={profile.name} className="Team_perfil">
+                        <Link to={`/perfil/${profile.name}`}>
+                            <img src={profile.image} alt={profile.name} className="team-image" />
+                            <div className="Team_perfil_nomb_nac">
+                                <h2>{profile.fullname}</h2>
+                                <img src={profile.nationality} alt="Nacionalidad" className="nationality-image" />
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>
             <div className='Team_categoria'>
-            <div className='LineaC'><nav></nav></div>
+                <div className='LineaC'><nav></nav></div>
                 <h3>SUB-23</h3>
                 <div className='LineaC'><nav></nav></div>
             </div>
             <div className="Team_imagenes">
                 {profilesSub23.map((profile) => (
-                    <div key={profile.name} className="Team_perfil" onClick={() => setSelectedProfile(profile.name)}>
-                        <img src={profile.image} alt={profile.name} className="team-image" />
-                        <div className="Team_perfil_nomb_nac">
-                            <h2>{profile.fullname}</h2>
-                            <img src={profile.nationality} alt="Nacionalidad" className="nationality-image" />
-                        </div>
+                    <div key={profile.name} className="Team_perfil">
+                        <Link to={`/perfil/${profile.name}`}>
+                            <img src={profile.image} alt={profile.name} className="team-image" />
+                            <div className="Team_perfil_nomb_nac">
+                                <h2>{profile.fullname}</h2>
+                                <img src={profile.nationality} alt="Nacionalidad" className="nationality-image" />
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>

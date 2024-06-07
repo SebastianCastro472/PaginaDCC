@@ -1,31 +1,47 @@
-import React, { useState } from 'react';
-import './App.css'
-import  {Main}  from './Web/Main';
-import  Header  from './Web/Header';
+// App.jsx
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { Main } from './Web/Main';
+import Header from './Web/Header';
 import { Footer } from './Web/Footer';
+import SignUp from './Web/Paginas/SignUp';
+import SignIn from './Web/Paginas/SignIn';
+import Subscription from './Web/Paginas/Subscription';
+
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('Principal');
-  const [selectedProfile, setSelectedProfile] = useState(null);
+    return (
+        <Router>
 
-  const handlePageChange = (page) => {
-      setSelectedProfile(null); // Deseleccionar perfil al cambiar de página
-      setCurrentPage(page);
-  };
+            {/*
+            <div className="App">
+                <Switch>
+                <Route path="/signup" component={SignUp} />
+                <Route path="/signin" component={SignIn} />
+                <Route path="/subscription" component={Subscription} />
+                </Switch>
+            </div>
+            */}
 
-  return (
-      <>
-      <div className='Pagina'> 
-          <Header setCurrentPage={handlePageChange} /> {/* Usar el componente Header importado */}
-          <Main 
-              currentPage={currentPage} 
-              selectedProfile={selectedProfile} 
-              setSelectedProfile={setSelectedProfile} 
-          /> {/* Usar el componente Main importado */}   
-          <Footer />{/* Usar el componente Footer importado */}
-      </div>
-      </>
-  );
+            
+            <div className='Pagina'>
+                <Header /> 
+                <Routes>
+                    <Route path="/equipo" element={<Main />} />
+                    <Route path="/comision" element={<Main />} />
+                    <Route path="/sponsors" element={<Main />} />
+                    <Route path="/sobre-nosotros" element={<Main />} />
+                    <Route path="/carreras" element={<Main />} />
+                    <Route path="/hazte-socio" element={<Main />} />
+                    <Route path="/perfil/:name" element={<Main />} />
+                    <Route path="/" element={<Main />} />
+                </Routes>
+                <Footer /> 
+            </div>
+            
+        </Router>
+    );
 }
 
 export default App;
