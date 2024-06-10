@@ -11,6 +11,7 @@ const Sponsors_principal = () => {
     <div className="Sponsors">
         <div className="Sponsors_principal-main">
             <h1>SPONSORS</h1>
+            <div className='LineaVerde'><span></span></div>
             <div className="Sponsors_principal-Principales">
                 <div className="Sponsors_principal-imagenes">
                     <img src={Sp1} alt="" />

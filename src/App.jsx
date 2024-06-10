@@ -1,7 +1,7 @@
 // App.jsx
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Main } from './Web/Main';
 import Header from './Web/Header';
 import { Footer } from './Web/Footer';
@@ -13,18 +13,6 @@ import Subscription from './Web/Paginas/Subscription';
 function App() {
     return (
         <Router>
-
-            {/*
-            <div className="App">
-                <Switch>
-                <Route path="/signup" component={SignUp} />
-                <Route path="/signin" component={SignIn} />
-                <Route path="/subscription" component={Subscription} />
-                </Switch>
-            </div>
-            */}
-
-            
             <div className='Pagina'>
                 <Header /> 
                 <Routes>
@@ -39,7 +27,6 @@ function App() {
                 </Routes>
                 <Footer /> 
             </div>
-            
         </Router>
     );
 }

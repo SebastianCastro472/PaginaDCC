@@ -8,7 +8,7 @@
   --color2: #f20707;
   --color3: #97d695;
   --color4: #d9d9d9;
-  --color5: #0D0D0D;
+  --color5: #000000;
   --color6: linear-gradient(180deg, var(--color4),var(--color1));
   --color8: linear-gradient(180deg, var(--color1),var(--color4));
   --color7: linear-gradient(180deg, var(--color2), var(--color1));
@@ -18,7 +18,7 @@
 .Pagina{
   margin: 0;
   padding: 0; 
-  background:var(--color4);
+  background:var(--color5);
   max-width: 100%;
   
 }
@@ -440,23 +440,17 @@ ul li a:hover {
 }
 /*-----------------------TEAMSLIDES---------------------------------------------------------*/
 .sldEquipo{
+  background: var(--color5);
   
-  background: var(--color4);
-  margin-top: 5%;
 }
 .sldEquipo h1{
-  color: var(--color1);
-  font-size:3cap;
+  color: #fff;
+  font-size:3.5cap;
   margin-top: 2%; 
-  margin-left: 2%;
-  text-shadow:  
-  -1px -1px 0 #000,  
-  1px -1px 0 #000,
-  -1px  1px 0 #000,
-  1px  1px 1px black; 
+  margin-left: 2%; 
 }
 .Teamcontainer {
-  padding-top: 1%;
+  
   padding-bottom: 3%;
   margin: 0 auto;
   
@@ -700,8 +694,8 @@ margin-bottom: 3%;
   }
 .LineaC{
   width: 100%;
-  height: 5px;
-  background: #000;
+  height: 3px;
+  background: var(--color1);
   margin-top:2% ;
 }
 
@@ -712,12 +706,14 @@ margin-bottom: 3%;
   gap: 1%; /* Ajusta este valor según el espacio deseado entre las imágenes */
   justify-items: center;
   margin-bottom: 10%;
+  
 }
 
 .team-image {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10% 10% 0 0;
 }
 
 .Team_titulo{
@@ -737,7 +733,9 @@ margin-bottom: 3%;
   margin-top: 3%;
   transition: 600ms;
   display: block;
+  background-color: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
 }
 .Team_perfil:hover{
  transform: scale(1.1);
@@ -785,13 +783,15 @@ margin-bottom: 3%;
   
 }
 .Team_perfil_nomb_nac h2{
-    font-size: 1.5cap;
+    font-size: 1.7cap;
     color: #ffffff;
     text-shadow:  
     -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px  1px 0 #000,
     3px  3px 3px black;
+    border-bottom: none;
+    text-decoration: none;
   }
 
 @media (max-width: 768px) {
@@ -1145,21 +1145,23 @@ margin-bottom: 3%;
   object-fit: cover;
 }
 /*---------------------------------SPONSORS PRINCIPAL----------------------*/
+.LineaVerde{
+  background-color: var(--color1);
+  width: 100%;
+  height: 2px;
+  margin-bottom: 3%;
+}
+
 .Sponsors_principal-main{
-  background: var(--color4);
+  background: var(--color5);
   margin-top: 5%;
   height: 1000px;
 }
 .Sponsors_principal-main h1{
-  color: var(--color1);
-  font-size:3cap;
+  color: #fff;
+  font-size:3.5cap;
   margin-top: 2%; 
-  margin-left: 2%;
-  text-shadow:  
-  -1px -1px 0 #000,  
-  1px -1px 0 #000,
-  -1px  1px 0 #000,
-  1px  1px 1px black;  
+  margin-left: 2%; 
 }
 .Sponsors_principal-Principales {
   display: grid;
@@ -1178,12 +1180,14 @@ margin-bottom: 3%;
   display: grid;
   justify-items: center;
   align-items: center;
-  
+  background-color: #cdcdcd;
+  border-radius: 7%;
+  box-shadow: 0px 0px 10px 0px var(--color1);
 }
 .Sponsors_principal-imagenes:hover{
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   
 }
 .Sponsors_principal-imagenes img{
@@ -1201,16 +1205,18 @@ margin-bottom: 3%;
   margin-left: 5%;
 }
 .Sponsors_principal-imagenes1{ 
-  width: 80%;
+  width: 90%;
   height: auto;
   display: grid;
   justify-items: center;
   align-items: center;
+  background-color: #cdcdcd;
+  border-radius: 7%;
+  box-shadow: 0px 0px 10px 0px var(--color1);
 }
 .Sponsors_principal-imagenes1:hover{
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .Sponsors_principal-imagenes1 img{
   width: 95%;

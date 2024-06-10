@@ -21,6 +21,7 @@ const Toto = new URL('../../imagenes/Ciclistas/Toto/Toto.jpg', import.meta.url).
 const TeamSlides = () => {
     return (
         <div className="Teamcontainer">
+            <div className='LineaVerde'><span></span></div>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
